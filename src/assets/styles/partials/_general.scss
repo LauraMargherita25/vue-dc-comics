@@ -1,4 +1,11 @@
-a{
-    text-decoration: none;
-    color: inherit;
+html{
+    font-family: 'Raleway', sans-serif;
+}
+
+.container{
+    width: 1200px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
 }

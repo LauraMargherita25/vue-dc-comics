@@ -1,9 +1,14 @@
 <template>
   <header>
+
+    <div class="container">
+
     <img src="@/assets/img/dc-logo.png" alt="">
+
     <ul>
       <li v-for="(link, index) in links" :key="index"><a :href="link.href">{{ link.text }}</a></li>
     </ul>
+    </div>
   </header>
 </template>
 
@@ -61,10 +66,6 @@ export default {
 
 <style scoped lang="scss">
 header{
-  width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
   background-color: white;
   li{
     display: inline-block;
@@ -76,5 +77,7 @@ header{
     }
   }
 }
-
+.container{
+  justify-content: space-between;
+}
 </style>

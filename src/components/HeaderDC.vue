@@ -1,6 +1,9 @@
 <template>
   <header>
-    {{ message }}
+    <img src="@/assets/img/dc-logo.png" alt="">
+    <ul>
+      <li v-for="(link, index) in links" :key="index"><a :href="link.href">{{ link.text }}</a></li>
+    </ul>
   </header>
 </template>
 
@@ -9,12 +12,55 @@ export default {
   name: 'HeaderDC',
   data () {
     return {
-      message: 'Odio tutti dìsenza distinzioni'
+      links: [
+        {
+          href: '#',
+          text: 'characters'
+        },
+        {
+          href: '#',
+          text: 'comics'
+        },
+        {
+          href: '#',
+          text: 'movies'
+        },
+        {
+          href: '#',
+          text: 'tv'
+        },
+        {
+          href: '#',
+          text: 'games'
+        },
+        {
+          href: '#',
+          text: 'collectibles'
+        },
+        {
+          href: '#',
+          text: 'videos'
+        },
+        {
+          href: '#',
+          text: 'fans'
+        },
+        {
+          href: '#',
+          text: 'news'
+        },
+        {
+          href: '#',
+          text: 'shop'
+        }
+      ]
     }
   }
 }
 </script>
 
-<style>
-
+<style scoped>
+li{
+  display: inline-block;
+}
 </style>

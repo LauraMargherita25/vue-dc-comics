@@ -59,8 +59,22 @@ export default {
 }
 </script>
 
-<style scoped>
-li{
-  display: inline-block;
+<style scoped lang="scss">
+header{
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  li{
+    display: inline-block;
+    padding: 1rem;
+    a{
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
+    }
+  }
 }
+
 </style>

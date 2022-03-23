@@ -2,11 +2,12 @@
   <header>
 
     <div class="container">
-
-      <img src="@/assets/img/dc-logo.png" alt="">
+      <div class="img_wrapper">
+        <img src="@/assets/img/dc-logo.png" alt="">
+      </div>
 
       <ul>
-        <li @click="setActiveIndex(index)" v-for="(link, index) in links" :key="index" :class="{active: index == activeIndex}"><a :href="link.href">{{ link.text }}</a></li>
+        <li @click="setActiveIndex(index)" v-for="(link, index) in links" :key="index" :class="{active: index == activeIndex}"><a :href="link.href">{{ link.text.toUpperCase() }}</a></li>
       </ul>
     </div>
   </header>
@@ -74,6 +75,15 @@ export default {
 @import "../assets/styles/partials/variables.scss";
 header{
   background-color: white;
+  .img_wrapper{
+    width: 100px;
+    height: 100px;
+    padding: 1rem;
+    img{
+      width: 100%;
+      object-fit: contain;
+    }
+  }
   li{
     display: inline-block;
     padding: 0 1rem;

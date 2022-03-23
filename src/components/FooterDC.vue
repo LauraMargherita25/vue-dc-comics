@@ -4,7 +4,7 @@
           <div class="container">
                 <ul>
                     <li v-for="(btn, index) in btns" :key="index">
-                        <img :src="'assets/img/buy-' + btn.img" alt="">
+                        <img :src="'assets/img/buy-' + 'btn.img'" alt="">
                         <a :href="btn.href">{{ btn.text }}</a>
                     </li>
                 </ul>
@@ -103,8 +103,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/styles/partials/variables.scss";
 .footer_top{
-    background-color: #0282f9;
+    background-color: $blue;
     color: white;
     .container{
         justify-content: space-evenly;

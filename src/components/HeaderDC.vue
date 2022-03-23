@@ -6,7 +6,7 @@
       <img src="@/assets/img/dc-logo.png" alt="">
 
       <ul>
-        <li v-for="(link, index) in links" :key="index"><a :href="link.href">{{ link.text }}</a></li>
+        <li @click="setActiveIndex(index)" v-for="(link, index) in links" :key="index" :class="{active: index == activeIndex}"><a :href="link.href">{{ link.text }}</a></li>
       </ul>
     </div>
   </header>
@@ -17,6 +17,7 @@ export default {
   name: 'HeaderDC',
   data () {
     return {
+      activeIndex: 1,
       links: [
         {
           href: '#',
@@ -60,17 +61,29 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    setActiveIndex (index) {
+      this.activeIndex = index
+    }
   }
 }
 </script>
 
 <style scoped lang="scss">
+@import "../assets/styles/partials/variables.scss";
 header{
   background-color: white;
   li{
     display: inline-block;
-    padding: 1rem;
+    padding: 0 1rem;
+    border-bottom: 5px solid white;
+    &.active {
+      color: $blue;
+      border-bottom: 5px solid $blue;
+    }
     a{
+      line-height: 100px;
       display: inline-block;
     }
   }

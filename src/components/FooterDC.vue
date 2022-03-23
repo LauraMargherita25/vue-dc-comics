@@ -13,6 +13,43 @@
     <div class="footer_mid">
       <div class="container">
         <div class="footer_mid_l">
+            <ul>
+              <h2>DC COMICS</h2>
+              <li><a href="#">Characters</a></li>
+              <li><a href="#">Comics</a></li>
+              <li><a href="#">Movies</a></li>
+              <li><a href="#">TV</a></li>
+              <li><a href="#">Games</a></li>
+              <li><a href="#">Videos</a></li>
+              <li><a href="#">News</a></li>
+            </ul>
+            <ul>
+              <h2>SHOP</h2>
+              <li><a href="#">Shop DC</a></li>
+              <li><a href="#">Shop DC Collectibles</a></li>
+            </ul>
+            <ul>
+              <h2>DC</h2>
+              <li><a href="#">Terms Of Use</a></li>
+              <li><a href="#">Privacy policy (New)</a></li>
+              <li><a href="#">Ad Choices</a></li>
+              <li><a href="#">Advertising</a></li>
+              <li><a href="#">Jobs</a></li>
+              <li><a href="#">Subscriptions</a></li>
+              <li><a href="#">Talent Workshops</a></li>
+              <li><a href="#">CPSC Certificates</a></li>
+              <li><a href="#">Ratings</a></li>
+              <li><a href="#">Shop Help</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+            <ul>
+              <h2>SITES</h2>
+              <li><a href="#">DC</a></li>
+              <li><a href="#">MAD Magazine</a></li>
+              <li><a href="#">DC Kids</a></li>
+              <li><a href="#">DC Universe</a></li>
+              <li><a href="#">DC Power Visa</a></li>
+            </ul>
           <!-- <ul>
             <ul v-for="(link,index) in links" :key="index">
               <h3>{{ link.title.toUpperCase() }}</h3>
@@ -123,17 +160,19 @@ footer{
   background-size: cover;
   background-repeat: no-repeat;
   .footer_top{
-      padding: 2rem;
-      background-color: $blue;
-      color: white;
-      .container{
-          justify-content: space-evenly;
-          li{
-              display: inline-block;
-              padding: 1rem;
-          a{
-              display: inline-block;
-          }
+    background-color: $blue;
+    color: white;
+    ul{
+      width: 100%;
+      padding: 2rem 0;
+      display: flex;
+      justify-content: space-evenly;
+      li{
+        display: inline-block;
+        padding: 1rem;
+      }
+      a{
+        display: inline-block;
       }
     }
   }
@@ -142,6 +181,18 @@ footer{
     color: white;
     .footer_mid_l{
       width: 50%;
+      display: flex;
+      ul{
+        margin: 0 1rem;
+        h2{
+          margin-bottom: 1rem;
+        }
+        li{
+          margin-bottom: .3rem;
+          font-size: 13px;
+          color: $gray_text;
+        }
+      }
     }
     .footer_mid_r{
       width: 50%;

@@ -1,9 +1,8 @@
 <template>
   <main>
-    <div class="jumbo">
-      <img src="../assets/img/jumbotron.jpg" alt="">
-    </div>
+    <div class="jumbo"></div>
     <div class="container">
+      <h1>current series</h1>
       <div class="grid">
         <CardComic v-for="comic in arrComics" :key="comic.series" :card-img="comic.thumb" :card-text="comic.series.toUpperCase()"/>
       </div>
@@ -104,10 +103,14 @@ export default {
 
 <style scoped lang="scss">
 @import "../assets/styles/partials/variables.scss";
+@import "../assets/styles/partials/mixins.scss";
+
 main{
   background-color: $background_color;
   .jumbo{
-    height: 30vh;
+    height: 500px;
+    background-image: url(../assets/img/jumbotron.jpg);
+    @include set-bg(top, cover, no-repeat);
     img{
       width: 100%;
       height: 100%;
@@ -116,19 +119,24 @@ main{
     }
   }
   .container{
-    flex-direction: column;
-    justify-content: center;
+    @include flex-layout(column, center, center, $wrap: nowrap);
     padding: 1rem;
+    color: white;
+    h1{
+      padding: .5rem 2.5rem;
+      align-self: flex-start;
+      text-transform: uppercase;
+      background-color: $blue;
+      position: relative;
+      bottom: 43px;
+    }
     .grid{
-      display: flex;
-      flex-wrap: wrap;
-      gap: .5rem;
-      color: white;
+      @include flex-layout($direction: row, $justify: center, $align: center, $wrap: wrap);
+      gap: 1rem;
     }
     .load-more_btn{
       padding: .5rem 2.5rem;
       text-transform: uppercase;
-      color: white;
       background-color: $blue;
     }
   }

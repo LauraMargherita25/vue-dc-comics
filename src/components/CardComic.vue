@@ -18,15 +18,17 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    .card{
-        flex-basis: calc((100% / 6) - .5rem);
-        .img_wrapper{
-            width: 100%;
-            height: 192px;
-            img{
-                width: 100%;
-                object-fit: fill;
-            }
-        }
+  .card{
+    width: calc(100% / 6 - 1rem);
+    margin-bottom: 2rem;
+    .img_wrapper{
+      width: 100%;
+      height: 200px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      img{
+        width: 100%;
+      }
     }
+  }
 </style>

@@ -154,11 +154,11 @@ export default {
 
 <style scoped lang="scss">
 @import "../assets/styles/partials/variables.scss";
+@import "../assets/styles/partials/mixins.scss";
+
 footer{
   background-image: url(../assets/img/footer-bg.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  @include set-bg(center, cover, no-repeat); 
   .footer_top{
     background-color: $blue;
     color: white;

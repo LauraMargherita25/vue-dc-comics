@@ -14,7 +14,7 @@
       <div class="container">
         <div class="footer_mid_l">
             <ul>
-              <h2>DC COMICS</h2>
+              <h2>dc comics</h2>
               <li><a href="#">Characters</a></li>
               <li><a href="#">Comics</a></li>
               <li><a href="#">Movies</a></li>
@@ -24,12 +24,12 @@
               <li><a href="#">News</a></li>
             </ul>
             <ul>
-              <h2>SHOP</h2>
+              <h2>shop</h2>
               <li><a href="#">Shop DC</a></li>
               <li><a href="#">Shop DC Collectibles</a></li>
             </ul>
             <ul>
-              <h2>DC</h2>
+              <h2>dc</h2>
               <li><a href="#">Terms Of Use</a></li>
               <li><a href="#">Privacy policy (New)</a></li>
               <li><a href="#">Ad Choices</a></li>
@@ -43,7 +43,7 @@
               <li><a href="#">Contact Us</a></li>
             </ul>
             <ul>
-              <h2>SITES</h2>
+              <h2>sites</h2>
               <li><a href="#">DC</a></li>
               <li><a href="#">MAD Magazine</a></li>
               <li><a href="#">DC Kids</a></li>
@@ -186,6 +186,7 @@ footer{
         margin: 0 1rem;
         h2{
           margin-bottom: 1rem;
+          text-transform: uppercase;
         }
         li{
           margin-bottom: .3rem;

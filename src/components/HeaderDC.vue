@@ -3,7 +3,7 @@
 
     <div class="container">
       <div class="img_wrapper">
-        <img src="@/assets/img/dc-logo.png" alt="">
+        <img src="../assets/img/dc-logo.png" alt="">
       </div>
 
       <ul>

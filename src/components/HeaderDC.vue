@@ -3,11 +3,11 @@
 
     <div class="container">
 
-    <img src="@/assets/img/dc-logo.png" alt="">
+      <img src="@/assets/img/dc-logo.png" alt="">
 
-    <ul>
-      <li v-for="(link, index) in links" :key="index"><a :href="link.href">{{ link.text }}</a></li>
-    </ul>
+      <ul>
+        <li v-for="(link, index) in links" :key="index"><a :href="link.href">{{ link.text }}</a></li>
+      </ul>
     </div>
   </header>
 </template>
@@ -72,8 +72,6 @@ header{
     padding: 1rem;
     a{
       display: inline-block;
-      text-decoration: none;
-      color: inherit;
     }
   }
 }

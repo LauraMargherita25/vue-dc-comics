@@ -1,6 +1,8 @@
 .<template>
   <div class="card">
-      <img :src="cardImg" :alt="cardText">
+      <div class="img_wrapper">
+        <img :src="cardImg" :alt="cardText">
+      </div>
       <p>{{ cardText }}</p>
   </div>
 </template>
@@ -15,6 +17,16 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped lang="scss">
+    .card{
+        flex-basis: calc((100% / 6) - .5rem);
+        .img_wrapper{
+            width: 100%;
+            height: 192px;
+            img{
+                width: 100%;
+                object-fit: fill;
+            }
+        }
+    }
 </style>

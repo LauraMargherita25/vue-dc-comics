@@ -4,7 +4,9 @@
       <img src="../assets/img/jumbotron.jpg" alt="">
     </div>
     <div class="container">
-      <CardComic v-for="comic in arrComics" :key="comic.series" :card-img="comic.thumb" :card-text="comic.series"/>
+      <div class="grid">
+        <CardComic v-for="comic in arrComics" :key="comic.series" :card-img="comic.thumb" :card-text="comic.series.toUpperCase()"/>
+      </div>
       <div class="load-more_btn">
         load more
       </div>
@@ -114,8 +116,15 @@ main{
     }
   }
   .container{
+    flex-direction: column;
     justify-content: center;
     padding: 1rem;
+    .grid{
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      color: white;
+    }
     .load-more_btn{
       padding: .5rem 2.5rem;
       text-transform: uppercase;
